@@ -1,0 +1,16 @@
+img {
+    height: 50px;
+    width: 5em;
+}
+
+th,
+td {
+    margin: 0;
+    line-height: 10px;
+    vertical-align: baseline !important;
+}
+
+.container-fluid {
+    height: 45em;
+    background-color: #51B3AE;
+}

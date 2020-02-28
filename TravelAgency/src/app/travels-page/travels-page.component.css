@@ -1,0 +1,20 @@
+.container-fluid {
+    background-color: #51B3AE;
+}
+
+.h1 {
+    -webkit-text-stroke: 1px black;
+}
+
+img {
+    height: 20em;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn {
+    margin-top: auto;
+}

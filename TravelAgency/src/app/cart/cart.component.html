@@ -1,0 +1,34 @@
+<div class="container-fluid p-5">
+    <button class="btn btn-danger float-right m-3" (click)="clearCart()">Empty Cart</button>
+
+    <div class="container mt-5">
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tour</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col"><button class="btn btn-warning" routerLink="/travels">Back to Tours</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tour of tours; index as i">
+                    <th scope="row"></th>
+                    <td><img class="" src="/assets/img/{{ tour.img }}" alt="Card Image"></td>
+                    <td>{{ tour.amount }}</td>
+                    <td>{{ tour.destination }}</td>
+                    <td>{{ tour.price }} $</td>
+                    <td><button class="btn btn-danger" (click)="removeItem(i)">Remove tour</button></td>
+                    <button (click)="addMore(tour)" class="plus"> + </button> <button (click)="addLess(tour,i)" class="minus"> - </button>
+                </tr>
+            </tbody>
+            <thead>
+                <tr class="text-center">
+                    <th colspan="6">Total: {{ calcTotal() }} &euro;</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

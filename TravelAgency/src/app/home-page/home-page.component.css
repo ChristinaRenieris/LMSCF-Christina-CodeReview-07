@@ -1,0 +1,20 @@
+.container-fluid {
+    background-color: #51B3AE;
+}
+
+img {
+    border-radius: 25px;
+    height: 40em;
+}
+
+.carousel {
+    width: 50em;
+}
+
+.h3 {
+    -webkit-text-stroke: 1px gray;
+}
+
+.p {
+    font-size: 1em;
+}

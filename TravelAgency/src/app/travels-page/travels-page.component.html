@@ -1,0 +1,52 @@
+<div class="container-fluid p-5">
+
+    <div class="mb-5">
+        <div class="h1 text-white text-center pb-4">Need to contact us?</div>
+        <form class="m-auto">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" id="inputFirst" placeholder="First Name" formControlName="firstName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" id="inputLast" placeholder="Last Name" formControlName="lastName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>E-Mail</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="random@gmail.com" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Notyourgasse 39/2/3" formControlName="adress">
+            </div>
+            <div class="form-group">
+                <label>Your Message</label>
+                <textarea type="text" class="form-control" rows="4" cols="5" id="textarea" placeholder="Your message" formControlName="message"></textarea>
+            </div>
+            <button type="submit" (click)="submitAlert()" class="btn btn-primary m-2">Submit</button>
+        </form>
+    </div>
+
+    <div class="row m-4">
+        <div class=" col-lg-4 col-md-5 col-sm-10 mb-3 d-flex alight-items-stretch" *ngFor="let tour of tours ; index as tourId">
+            <div class="card p-3 text-center w-100" style="width: 18rem;">
+                <img class="card-img-top" src="/assets/img/{{ tour.img }}" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ tour.destination }}</h5>
+                    <div class="p-2">
+                        <ul class="list-unstyled text-left">
+                            <li>Description : {{ tour.description }}</li>
+                            <li>Starting Dates : {{ tour.startDates }}</li>
+                            <li>Duration : {{ tour.duration }}</li>
+                            <li>Price : {{ tour.price }} &euro;</li>
+                        </ul>
+                    </div>
+                    <button id="btn" class="btn btn-lg btn-primary" (click)="addToCart(tour)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
