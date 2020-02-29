@@ -1,1 +1,15 @@
-<p>blog-page works!</p>
+<div class="container-fluid">
+    <div class="h1 text-center text-white p-5">Latest Blog posts</div>
+    <div class="row ml-5 mr-5">
+        <div class=" col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-3 d-flex alight-items-stretch" *ngFor="let blogPost of blogPosts">
+            <div class="card p-3 text-center w-100" style="width: 18rem;">
+                <img class="card-img-top" src="/assets/img/{{ blogPost.img }}" alt="Card Image">
+                <div class="card-body">
+                    <h3 class="card-title text-white p-4">{{ blogPost.title }}</h3>
+
+                    <button id="btn" class="btn btn-lg btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

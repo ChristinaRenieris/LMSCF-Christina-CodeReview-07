@@ -17,4 +17,6 @@ img {
 
 .p {
     font-size: 1em;
+    background-color: white;
+    border-radius: 25px;
 }

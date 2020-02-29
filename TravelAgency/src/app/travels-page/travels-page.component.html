@@ -30,7 +30,7 @@
     </div>
 
     <div class="row m-4">
-        <div class=" col-lg-4 col-md-5 col-sm-10 mb-3 d-flex alight-items-stretch" *ngFor="let tour of tours ; index as tourId">
+        <div class=" col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-3 d-flex alight-items-stretch" *ngFor="let tour of tours ; index as tourId">
             <div class="card p-3 text-center w-100" style="width: 18rem;">
                 <img class="card-img-top" src="/assets/img/{{ tour.img }}" alt="Card Image">
                 <div class="card-body">
@@ -38,8 +38,11 @@
                     <div class="p-2">
                         <ul class="list-unstyled text-left">
                             <li>Description : {{ tour.description }}</li>
+                            <br>
                             <li>Starting Dates : {{ tour.startDates }}</li>
+                            <br>
                             <li>Duration : {{ tour.duration }}</li>
+                            <br>
                             <li>Price : {{ tour.price }} &euro;</li>
                         </ul>
                     </div>
